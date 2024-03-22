@@ -1,0 +1,247 @@
+.consultar{
+    width: 100%;
+    height: auto;
+    min-height: 150vh;
+}
+
+
+.caja-consulta{
+    width: 50%;
+    height: auto;
+    min-height: 50vh;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja-consulta.cambio{
+    display: none;
+}
+
+.caja-consulta form{
+    background-color: var(--negro);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 5px;
+    color: var(--blanco);
+    border: 3px solid var(--rojo);
+}
+
+form h1{
+    color: var(--rojo);
+}
+
+
+
+
+
+
+
+.caja-busqueda{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: end;
+}
+.caja-busqueda.cambio{
+    display: none;
+}
+
+#busqueda{
+    width: 30%;
+    height: 100%;
+    min-width: 100px;
+    background-color: var(--negro);
+}
+
+
+
+
+.tabla-consulta{
+    background-color: var(--rojo);
+    width: 80%;
+    height: 70vh;
+    margin: 20px  auto;
+    border: 3px solid var(--rojo);
+}
+
+.tabla-consulta.cambio{
+    display: none;
+}
+
+.tabla-consulta h1{
+    width: 100%;
+    height: 10%;
+    display: grid;
+    place-items: center;
+}
+
+.tabla-info{
+    width: 100%;
+    height: 10%;
+}
+
+
+.tabla-info .datos,
+.datos-cabeza{
+    background-color: var(--negro);
+    width: 90%;
+    height: 100%;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(6, 1fr);
+    border-radius: 5px;
+    color: var(--blanco);
+    border: 3px solid var(--rojo);
+}
+
+.tabla-consulta .tabla{
+    background-color: var(--negro);
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
+}
+
+.tabla::-webkit-scrollbar{
+    background-color: var(--negro);
+    width: 5px;
+}
+.tabla::-webkit-scrollbar-thumb{
+    background-color: var(--rojo);
+}
+
+.tabla .datos{
+    background-color: var(--negro);
+    width: 90%;
+    height: auto;
+    min-height: 10vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border-radius: 5px;
+    border: 3px solid var(--rojo);
+    margin-top: 10px;
+    color: var(--blanco);
+}
+
+
+/* .datos:first-of-type{
+    margin-top: 0px;
+} */
+
+
+.datos span,
+.datos-cabeza span{
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow-wrap: break-word;
+    
+}
+.datos span button{ 
+    width: 80%;
+}
+.datos #s-editar{
+    align-items: center;
+}
+
+
+
+
+
+
+.caja-editar{
+    width: 50%;
+    height: auto;
+    min-height: 50vh;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    margin: 20px auto;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+    border: 3px solid var(--rojo);
+}
+
+.caja-editar.cambio{
+    display: flex;
+}
+.caja-editar .form-editar{
+    background-color: var(--negro);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.form-editar .caja-imagen{
+    background-color: var(--negro);
+    width: 100px;
+    height: 100px;
+    min-height: 100px;
+    resize: none;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--rojo);
+    overflow: hidden;
+}
+
+.caja-imagen img{
+    width: 100%;
+    height: 100%;
+}
+
+
+#file{
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    .caja-consulta{
+        width: 95%;
+    }
+
+    .tabla-consulta{
+        width: 95%;
+    }
+    .caja-busqueda{
+        width: 100%;
+    }
+    .tabla .datos{
+
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .tabla-info .datos,
+    .datos-cabeza{
+        font-size: .5rem;
+        content: 'Datos';
+        
+    }
+
+    .caja-editar{
+        width: 95%;
+    }
+
+}
+

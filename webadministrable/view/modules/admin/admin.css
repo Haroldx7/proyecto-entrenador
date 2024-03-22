@@ -1,0 +1,75 @@
+.admin{
+    width: 100%;
+    height: auto;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel-control{
+    width: 70%;
+    height: auto;
+    min-height: 70vh;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 3px solid var(--rojo);
+
+}
+
+.panel-control h1{
+    background-color:var(--rojo);
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel-control .caja-panel{
+    background-color: rgba(0, 0, 0, 0.366);
+    backdrop-filter: blur(50%);
+    width: 100%;
+    height: auto;
+    min-height: 60vh;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.caja-panel span{
+    background-image: radial-gradient(rgba(0, 0, 0, 0.617) 20%, rgb(168, 168, 168) 80%);
+    backdrop-filter: var(--vidrio);
+    width: 20%;
+    height: 15vh;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: .1s;
+    border: 3px solid var(--blanco);
+    
+    color: var(--blanco);
+}
+
+
+.caja-panel span:hover{
+    scale: 1.05;
+    border: 1px solid var(--blanco);
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 500px) {
+    .panel-control {
+        width: 95%;
+        font-size: 0.9rem;
+    }
+}

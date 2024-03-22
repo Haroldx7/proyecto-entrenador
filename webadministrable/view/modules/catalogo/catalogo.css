@@ -1,0 +1,9 @@
+.catalogo{
+    background-color: rgb(16, 43, 96);
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

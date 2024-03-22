@@ -1,0 +1,217 @@
+.home{
+    width: 100%;
+    height: auto;
+    min-height: 250vh;
+}
+
+.presentacion{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 89vh;
+    max-height: 89vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    position: relative;
+    border-bottom: 3px solid var(--rojo);
+}
+
+
+
+.caja-img{
+    width: 300px;
+    height: 300px;
+    min-height: 200px;
+    border-radius: 50%;
+    order: 1;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.caja-img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    
+}
+
+
+.caja-texto{
+    background-color: var(--negro);
+    width: 60%;
+    height: auto;
+    max-height: 70vh;
+    min-height: 50vh;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: justify;
+    overflow-wrap: break-word;
+    color: var(--blanco);
+    z-index: 2;
+    border: 3px solid var(--rojo);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+}
+
+.flecha{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 3px;
+    border: 2px solid var(--blanco);
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    animation: fondo 1s infinite;
+    z-index: 2;
+}
+
+.flecha img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background-color: var(--rojo);
+}
+.planes{
+    background-color: var(--negro);
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--negro);
+    color: var(--rojo);
+    margin-top: 20px;
+}
+
+.tajeta{
+    background-color: var(--negro);
+    backdrop-filter: blur(50%);
+    width: 50%;
+    height: auto;
+    min-height: 400px;
+    max-height: 800px;
+    margin: 40px  auto;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 3px solid var(--rojo);
+    transition: .1s;
+}
+
+
+
+.tajeta h1{
+    background-color: var(--rojo);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tajeta .contenido{
+    
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    padding: 20px;
+}
+
+.contenido .caja-info{ 
+    background-color: var(--rojo);
+    width:70%;
+    height: auto;
+    min-height: 50px;
+    color: var(--blanco);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+    padding: 5px;
+    color: var(--negro);
+
+}
+.caja-info:hover{
+    scale: 1.05;
+}
+
+.contenido .caja-texto-info{
+    width:70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido .precio{
+    width: 50%;
+    height: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--blanco);
+}
+.precio span{
+    color: red;
+    font-size: .7rem;
+}
+.precio:first-of-type{
+    margin-top: 20px;
+}
+
+
+@keyframes fondo{
+    0%{
+        bottom: 20px;
+    }
+    100%{
+        background-color: var(--rojo);
+        bottom: 5px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .home{
+        min-height: 200vh;
+    }
+    
+    .presentacion{
+        flex-direction: column;
+        gap: 2vh;
+        height: 82vh;
+    }
+    .caja-img{
+        width: 200px;
+        height: 200px;
+        order: 0;
+    }
+    .caja-texto{
+        width: 95%;
+        min-height: 2vh;
+        height: 38vh;
+        overflow-y: scroll;
+    }
+    .presentacion::before{
+        height: 83vh;
+    }
+
+    .tajeta{
+        width: 95%;
+    }
+
+    .contenido .caja-info{
+        width: 99%;
+    }
+}

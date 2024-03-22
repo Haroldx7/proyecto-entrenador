@@ -1,0 +1,1 @@
+import {doc, eve, click} from './catalogoVars.js'

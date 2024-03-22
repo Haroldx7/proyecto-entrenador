@@ -1,0 +1,116 @@
+.cliente{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja-perfil{
+    background-color: var(--negro);
+    width: 50%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 3px solid var(--rojo);
+}
+
+.caja-perfil .caja-imagen{
+    width: 100%;
+    height: 40%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+.caja-imagen .sub-imagen{
+    width: 100px;
+    height: 100px;
+    min-height: 100px;
+    resize: none;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.sub-imagen img{
+    width: 100%;
+    height: 100%;
+}
+
+.caja-imagen .sub-info{
+    background-color: var(--negro);
+    width: auto;
+    min-width: 40%;
+    height: auto;
+    min-height: 25vh;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: var(--blanco);
+    border: 3px solid var(--rojo);
+}
+
+.caja-perfil .caja-rutina{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja-rutina .sub-rutina{
+    width: 90%;
+    height: 90%;
+    overflow-y: scroll;
+    border: 3px solid var(--rojo);
+    border-radius: 5px;
+}
+
+.sub-rutina::-webkit-scrollbar{
+    background-color: var(--negro);
+    width: 5px;
+    border-radius: 5px;
+
+}
+
+.sub-rutina::-webkit-scrollbar-thumb{
+    background-color: var(--rojo);
+    border-radius: 5px;
+}
+
+.sub-rutina .dia{
+    background-color: var(--negro);
+    width: 90%;
+    height: 100px;
+    margin:10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+    border: 2px solid var(--blanco);
+    cursor: pointer;
+    transition: .1s;
+}
+
+.dia:hover{
+    background-color: var(--vidrio);
+    scale: 1.01;
+    border: 1px solid var(--rojo);
+    color: var(--rojo);
+}
+@media screen and (max-width: 500px) {
+    .caja-perfil{
+        width: 95%;
+    }
+    .caja-perfil .caja-imagen{
+        flex-direction: column;
+        gap: 2.5%;
+    }
+    .caja-imagen .sub-info{
+        min-height: 10vh;
+        width: 80%;
+    }
+}
